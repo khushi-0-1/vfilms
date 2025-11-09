@@ -1,16 +1,53 @@
-# React + Vite
+# VFilms Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a visual storytelling portfolio website for VFilms.  
+The site highlights the studio’s work, team identity, artistic approach, and contact flow.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Pages Overview
 
-## React Compiler
+### 1) Hero Page
+The Hero section introduces VFilms with a minimal design and a mandala-inspired visual theme.  
+It communicates the core identity — *Films, Brands, Art*, and sets the tone for the storytelling style of the brand.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2) Team Page
+This page highlights the people behind VFilms.  
+It visually represents the team silhouettes along with creative roles such as:
+- Film Makers
+- Branding Experts
+- Art Curators
 
-## Expanding the ESLint configuration
+It conveys collaboration, culture, and creative identity.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 3) About Page
+The About section presents:
+- The journey of VFilms
+- The philosophy of blending art and storytelling
+- Key highlights like **85+ Projects, 50+ Happy Clients, 10+ Experts Team**
+
+The layout uses sticky note visuals and organic shapes to create an artistic narrative tone.
+
+### 4) Contact Page
+A simple and intuitive communication form where users can share their project inquiries.  
+Form fields include: Name, Email, Phone, and Message.  
+Submissions are sent to the backend via API.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|------|------------|
+| Frontend | React + Vite |
+| Styling | CSS3 (Custom Styles) |
+| Deployment | Vercel |
+| Forms | Fetch API Integration |
+
+---
+
+## Running the Project Locally
+
+```bash
+npm install
+npm run dev
