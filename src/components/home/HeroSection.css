@@ -1,0 +1,201 @@
+/* src/components/home/HeroSection.css */
+
+/* --- Base Section Styling --- */
+.hero-section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 40px;
+  box-sizing: border-box;
+  position: relative;
+  font-family: 'Instrument Sans', Arial, sans-serif;
+}
+
+/* --- Main Container --- */
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  /* FIXED: More space between mandala and text */
+  gap: 100px; 
+}
+
+/* --- Left Column (Logo Area) --- */
+.hero-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-mandala {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  animation: spin 60s linear infinite;
+}
+
+.hero-logo {
+  position: absolute;
+  width: 55%;
+  max-width: 250px;
+  height: auto;
+}
+
+/* --- Right Column (Text Area) --- */
+.hero-right {
+  flex: 1.2;
+  max-width: 825px; /* Width from your spec */
+  color: #000;
+  /* FIXED: Center aligning all text content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Main Title Styling (FIXED) --- */
+.hero-title {
+  font-family: 'Island Moments', cursive; /* Your font */
+  font-size: 100px; /* Your font size */
+  font-weight: 400;
+  line-height: 1; /* Your line height (100%) */
+  color: #0F3255; /* Your color */
+  text-align: center;
+  /* FIXED: "lot of space between them" */
+  margin-bottom: 40px; 
+}
+
+/* --- Subtitle Styling (FIXED) --- */
+.hero-subtitle {
+  font-family: 'Halant', serif; /* Your font */
+  font-size: 40px; /* Your font size */
+  font-weight: 400;
+  line-height: 1; /* Your line height (100%) */
+  color: #F15D2B; /* Your color */
+  text-align: center;
+  /* FIXED: "lot of space between them" */
+  margin-bottom: 40px;
+}
+
+/* --- Description Styling (FIXED) --- */
+.hero-description {
+  font-family: 'Instrument Sans', sans-serif; /* Your font */
+  font-size: 18px; /* Your font size */
+  line-height: 1.7; /* 100% is unreadable for a paragraph, 1.7 is better */
+  color: #252729; /* Your color */
+  text-align: center;
+  max-width: 487px; /* Width from your spec */
+}
+
+/* --- Scroll Down Arrow --- */
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  color: #333;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-down-arrow:hover {
+  opacity: 1;
+}
+
+.scroll-down-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Animations --- */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* --- Responsiveness (Updated for new font sizes) --- */
+@media (max-width: 1024px) {
+  .hero-container {
+    gap: 60px;
+  }
+  .hero-title {
+    font-size: 80px; /* Scale down 100px font */
+  }
+  .hero-mandala {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 20px;
+    align-items: flex-start;
+  }
+  .hero-container {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  .hero-left {
+    order: -1; 
+    margin-bottom: 20px;
+  }
+  .hero-mandala {
+    max-width: 300px;
+
+  }
+  .hero-right {
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 60px; /* Scale down 100px font */
+  }
+  .hero-subtitle {
+    font-size: 32px; /* Scale down 40px font */
+  }
+  .hero-description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 48px; /* Scale down 100px font */
+  }
+  .hero-subtitle {
+    font-size: 28px;
+  }
+  .hero-description {
+    font-size: 16px;
+    max-width: 90%;
+  }
+}
+

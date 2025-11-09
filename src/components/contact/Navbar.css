@@ -1,0 +1,17 @@
+.navbar {
+  position: absolute; /* This makes it float over the page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  background-color: transparent; /* This makes it blend */
+  z-index: 100;
+  display: flex;
+  justify-content: flex-start; /* Aligns logo to the left */
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.navbar .logo {
+  height: 40px; /* Adjust as needed */
+}
